@@ -32,5 +32,5 @@ jobs:
 
       - name: deploy-to-k8s
         run: |
-          kubectl apply -f manifests/ --validate=false
-          kubectl rollout status deployment/my-deployment
+          kubectl set image deployment/mydp my-container1=basavaraj1234/hotstar:latest
+          kubectl rollout status deployment/mydp
